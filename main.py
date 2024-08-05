@@ -34,7 +34,7 @@ if openai_api_key:
     vectordb_file_path = "my_vectordb"
 
     def create_db():
-        loader = CSVLoader(file_path='smash-faqs.csv', source_column="prompt")
+        loader = CSVLoader(file_path='napoleon-faqs.csv', source_column="prompt")
         documents = loader.load()
         vectordb = FAISS.from_documents(documents, embedding)
 
