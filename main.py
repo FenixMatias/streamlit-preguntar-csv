@@ -90,7 +90,7 @@ if openai_api_key:
     if btn:
         create_db()
 
-    question = st.text_input("Question: ")
+    question = st.text_input("Pregunta: ")
 
     if question:
         chain = execute_chain()
