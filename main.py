@@ -49,7 +49,7 @@ if openai_api_key:
                 return None
             
             # Cargar la base de datos vectorial desde la carpeta local
-            vectordb = FAISS.load_local(vectordb_file_path, embedding)
+            vectordb = FAISS.load_local(vectordb_file_path, embedding, allow_dangerous_deserialization=True)
 
             # Crear un recuperador para consultar la base de datos de vectores
             retriever = vectordb.as_retriever(score_threshold=0.7)
